@@ -1,0 +1,18 @@
+name: Practice Workflow
+on: workflow_dispatch
+jobs:
+   first-job: 
+      runs-on: ubuntu-latest
+      steps:
+        - name: Say Hiiii!
+          run: echo "Hiiii!"
+        - name: Say Good Bye
+          run : echo "Good Bye"
+   second-job:
+          runs-on: ubuntu-latest
+          steps:
+            - name: Get code
+              uses: actions/checkout@v3
+            - name: Deploy Code 
+              run: echo "deploying the code..."
+           
